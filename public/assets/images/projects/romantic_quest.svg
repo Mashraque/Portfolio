@@ -1,0 +1,46 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#19002e"/>
+      <stop offset="50%" stop-color="#2a0845"/>
+      <stop offset="100%" stop-color="#0f0c29"/>
+    </linearGradient>
+    <linearGradient id="sunset-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff007f"/>
+      <stop offset="60%" stop-color="#ffaa00"/>
+      <stop offset="100%" stop-color="#7928ca"/>
+    </linearGradient>
+    <filter id="glow-2" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg-grad-2)"/>
+  <!-- Sun & Horizon -->
+  <circle cx="400" cy="200" r="110" fill="url(#sunset-grad)" filter="url(#glow-2)" opacity="0.9"/>
+  <!-- Floating Island -->
+  <path d="M 180 270 Q 400 240 620 270 Q 480 370 400 390 Q 320 370 180 270 Z" fill="#1b1435" stroke="#ff007f" stroke-width="2"/>
+  <path d="M 180 270 Q 400 250 620 270 L 600 280 Q 400 260 200 280 Z" fill="#00f5d4" opacity="0.8"/>
+  <!-- Ancient Temple / Archway -->
+  <rect x="360" y="170" width="15" height="90" fill="#2d1b4e" stroke="#ff007f" stroke-width="1.5"/>
+  <rect x="425" y="170" width="15" height="90" fill="#2d1b4e" stroke="#ff007f" stroke-width="1.5"/>
+  <path d="M 345 170 Q 400 130 455 170 Z" fill="#3a1c62" stroke="#00f5d4" stroke-width="2"/>
+  <!-- Glowing Quest Beacon -->
+  <circle cx="400" cy="210" r="12" fill="#00f5d4" filter="url(#glow-2)"/>
+  <line x1="400" y1="210" x2="400" y2="40" stroke="#00f5d4" stroke-width="2" stroke-dasharray="4,4" filter="url(#glow-2)"/>
+  <!-- Cinemachine Camera Frame overlay -->
+  <rect x="40" y="40" width="720" height="370" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1"/>
+  <!-- Rule of thirds grid -->
+  <line x1="280" y1="40" x2="280" y2="410" stroke="#ffffff" stroke-opacity="0.1" stroke-dasharray="2,4"/>
+  <line x1="520" y1="40" x2="520" y2="410" stroke="#ffffff" stroke-opacity="0.1" stroke-dasharray="2,4"/>
+  <line x1="40" y1="163" x2="760" y2="163" stroke="#ffffff" stroke-opacity="0.1" stroke-dasharray="2,4"/>
+  <line x1="40" y1="286" x2="760" y2="286" stroke="#ffffff" stroke-opacity="0.1" stroke-dasharray="2,4"/>
+  <!-- Cinemachine HUD -->
+  <rect x="50" y="50" width="180" height="30" rx="4" fill="#0b132b" fill-opacity="0.8" stroke="#ff007f" stroke-width="1"/>
+  <text x="60" y="70" fill="#ff007f" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">CINEMACHINE // VIRTUAL_CAM_01</text>
+  <rect x="570" y="50" width="180" height="30" rx="4" fill="#0b132b" fill-opacity="0.8" stroke="#00f5d4" stroke-width="1"/>
+  <text x="580" y="70" fill="#00f5d4" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">QUEST: FIND ANCIENT KEY</text>
+  <!-- Title Badge -->
+  <rect x="230" y="400" width="340" height="32" rx="6" fill="#0b132b" fill-opacity="0.9" stroke="#ff007f" stroke-width="1.5"/>
+  <text x="400" y="422" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" letter-spacing="2">ROMANTIC QUEST • NARRATIVE 3D</text>
+</svg>
