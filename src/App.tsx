@@ -6,7 +6,6 @@ import { ParticleCanvas } from './components/hero/ParticleCanvas';
 import { AboutMe } from './components/about/AboutMe';
 import { SkillsMatrix } from './components/skills/SkillsMatrix';
 import { ProjectsSection } from './components/projects/ProjectsSection';
-import { MiniGameSandbox } from './components/playground/MiniGameSandbox';
 import { DevProcessTimeline } from './components/pipeline/DevProcessTimeline';
 import { ExperienceSection } from './components/experience/ExperienceSection';
 import { EducationSection } from './components/education/EducationSection';
@@ -20,7 +19,7 @@ export const App: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'projects', 'sandbox', 'process', 'experience', 'education', 'contact'];
+      const sections = ['home', 'about', 'skills', 'projects', 'process', 'experience', 'education', 'contact'];
       const scrollPosition = window.scrollY + 200;
 
       for (const sectionId of sections) {
@@ -58,7 +57,6 @@ export const App: React.FC = () => {
         <AboutMe />
         <SkillsMatrix />
         <ProjectsSection />
-        <MiniGameSandbox />
         <DevProcessTimeline />
         <ExperienceSection />
         <EducationSection />

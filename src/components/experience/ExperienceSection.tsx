@@ -19,7 +19,7 @@ export const ExperienceSection: React.FC = () => {
         <div className="flex flex-col items-center text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-card border border-cyber-primary/30 text-xs font-mono text-cyber-primary mb-3">
             <Briefcase className="w-3.5 h-3.5" />
-            <span>06 // PROFESSIONAL_HISTORY</span>
+            <span>05 // PROFESSIONAL_HISTORY</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-display font-black text-white tracking-wide">
             EXPERIENCE & OPERATIONAL LEADERSHIP

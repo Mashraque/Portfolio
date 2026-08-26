@@ -29,7 +29,7 @@ export const DevProcessTimeline: React.FC = () => {
         <div className="flex flex-col items-center text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-card border border-cyber-primary/30 text-xs font-mono text-cyber-primary mb-3">
             <Workflow className="w-3.5 h-3.5" />
-            <span>05 // DEVELOPMENT_PIPELINE</span>
+            <span>04 // DEVELOPMENT_PIPELINE</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-display font-black text-white tracking-wide">
             HOW I CRAFT PLAYABLE GAMES

@@ -18,7 +18,7 @@ export const EducationSection: React.FC = () => {
         <div className="flex flex-col items-center text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-card border border-cyber-primary/30 text-xs font-mono text-cyber-primary mb-3">
             <GraduationCap className="w-3.5 h-3.5" />
-            <span>07 // ACADEMIC_FOUNDATION</span>
+            <span>06 // ACADEMIC_FOUNDATION</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-display font-black text-white tracking-wide">
             EDUCATION & COMPUTER SCIENCE CORE

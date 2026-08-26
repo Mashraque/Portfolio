@@ -50,9 +50,9 @@ export const Footer: React.FC = () => {
               <a href="#about" onClick={() => soundFx.playClick()} className="hover:text-cyber-primary transition-colors">› About Me</a>
               <a href="#skills" onClick={() => soundFx.playClick()} className="hover:text-cyber-primary transition-colors">› Skills Matrix</a>
               <a href="#projects" onClick={() => soundFx.playClick()} className="hover:text-cyber-primary transition-colors">› Featured Games</a>
-              <a href="#sandbox" onClick={() => soundFx.playClick()} className="hover:text-cyber-primary transition-colors">› Mechanics Sandbox</a>
               <a href="#process" onClick={() => soundFx.playClick()} className="hover:text-cyber-primary transition-colors">› Dev Pipeline</a>
               <a href="#experience" onClick={() => soundFx.playClick()} className="hover:text-cyber-primary transition-colors">› Experience</a>
+              <a href="#education" onClick={() => soundFx.playClick()} className="hover:text-cyber-primary transition-colors">› Education</a>
               <a href="#contact" onClick={() => soundFx.playClick()} className="hover:text-cyber-primary transition-colors">› Contact</a>
             </div>
           </div>
