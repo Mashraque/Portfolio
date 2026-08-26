@@ -1,0 +1,37 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#03045e"/>
+      <stop offset="50%" stop-color="#023e8a"/>
+      <stop offset="100%" stop-color="#0077b6"/>
+    </linearGradient>
+    <filter id="glow-6" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg-grad-6)"/>
+  <!-- Physics Chamber Isometric Grid -->
+  <path d="M 400 120 L 680 230 L 400 370 L 120 230 Z" fill="#001845" stroke="#00b4d8" stroke-width="2"/>
+  <!-- Levitating Glowing Cube (Physics object) -->
+  <g transform="translate(400, 200)">
+    <!-- Top Face -->
+    <polygon points="0,-60 55,-30 0,0 -55,-30" fill="#90e0ef" stroke="#ffffff" stroke-width="2" filter="url(#glow-6)"/>
+    <!-- Left Face -->
+    <polygon points="-55,-30 0,0 0,65 -55,35" fill="#0077b6" stroke="#ffffff" stroke-width="1.5"/>
+    <!-- Right Face -->
+    <polygon points="0,0 55,-30 55,35 0,65" fill="#0096c7" stroke="#ffffff" stroke-width="1.5"/>
+    <!-- Energy Runes on Cube -->
+    <circle cx="0" cy="0" r="12" fill="#ffffff" filter="url(#glow-6)"/>
+  </g>
+  <!-- Pressure Plate Target -->
+  <ellipse cx="280" cy="275" rx="45" ry="22" fill="#03045e" stroke="#00f5d4" stroke-width="3" filter="url(#glow-6)"/>
+  <!-- Gravity Beam / Physics Tether -->
+  <line x1="400" y1="265" x2="280" y2="275" stroke="#00f5d4" stroke-width="3" stroke-dasharray="6,4" filter="url(#glow-6)"/>
+  <!-- HUD -->
+  <rect x="30" y="30" width="180" height="34" rx="6" fill="#001233" stroke="#90e0ef" stroke-width="1.5"/>
+  <text x="40" y="52" fill="#90e0ef" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold">CHAMBER 09 // SOLVED: 85%</text>
+  <!-- Title Badge -->
+  <rect x="230" y="400" width="340" height="32" rx="6" fill="#001233" fill-opacity="0.9" stroke="#00b4d8" stroke-width="1.5"/>
+  <text x="400" y="422" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" letter-spacing="2">PUZZLE CORE • 3D PHYSICS</text>
+</svg>
