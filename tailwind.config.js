@@ -8,59 +8,32 @@ export default {
   theme: {
     extend: {
       colors: {
-        cyber: {
-          bg: '#070b14',
-          darker: '#03060c',
-          card: '#0c1322',
-          cardHover: '#131d33',
-          panel: '#10192e',
-          border: '#1b2742',
-          borderGlow: '#00f5d4',
-          primary: '#00f5d4',
-          primaryHover: '#38ef7d',
-          secondary: '#7b2cbf',
-          accent: '#f72585',
-          neonBlue: '#00bbf9',
-          neonPink: '#ff007f',
-          neonYellow: '#ffd166',
-          textMuted: '#94a3b8',
-          textLight: '#f8fafc'
+        dark: {
+          bg: '#090d16',
+          darker: '#05070d',
+          card: '#0f172a',
+          cardHover: '#162238',
+          panel: '#131d33',
+          border: '#1e293b',
+          borderHover: '#334155'
+        },
+        laser: {
+          cyan: '#06b6d4',
+          cyanLight: '#22d3ee',
+          emerald: '#10b981',
+          sky: '#38bdf8',
+          rose: '#f43f5e'
         }
       },
       fontFamily: {
-        sans: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
-        display: ['Orbitron', 'Space Grotesk', 'sans-serif']
-      },
-      animation: {
-        'pulse-glow': 'pulseGlow 2.5s infinite ease-in-out',
-        'float': 'float 4s infinite ease-in-out',
-        'radar': 'radar 4s linear infinite',
-        'shimmer': 'shimmer 2.5s infinite linear'
-      },
-      keyframes: {
-        pulseGlow: {
-          '0%, 100%': { opacity: '0.4', filter: 'drop-shadow(0 0 8px rgba(0, 245, 212, 0.4))' },
-          '50%': { opacity: '0.9', filter: 'drop-shadow(0 0 20px rgba(0, 245, 212, 0.8))' }
-        },
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-6px)' }
-        },
-        radar: {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg)' }
-        },
-        shimmer: {
-          '0%': { backgroundPosition: '-200% 0' },
-          '100%': { backgroundPosition: '200% 0' }
-        }
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Fira Code', 'Consolas', 'monospace'],
+        display: ['Space Grotesk', 'Inter', 'sans-serif']
       },
       boxShadow: {
-        'cyber-neon': '0 0 20px rgba(0, 245, 212, 0.25), inset 0 0 15px rgba(0, 245, 212, 0.05)',
-        'cyber-purple': '0 0 20px rgba(123, 44, 191, 0.3), inset 0 0 15px rgba(123, 44, 191, 0.1)',
-        'cyber-pink': '0 0 20px rgba(247, 37, 133, 0.3), inset 0 0 15px rgba(247, 37, 133, 0.1)',
-        'glass-panel': '0 8px 32px 0 rgba(0, 0, 0, 0.6)'
+        'laser-glow': '0 0 20px -5px rgba(6, 182, 212, 0.25)',
+        'laser-glow-emerald': '0 0 20px -5px rgba(16, 185, 129, 0.25)',
+        'card-subtle': '0 4px 20px -2px rgba(0, 0, 0, 0.5)'
       }
     },
   },

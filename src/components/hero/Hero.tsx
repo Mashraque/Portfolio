@@ -5,159 +5,136 @@ import {
   ArrowRight, 
   Mail, 
   Github, 
-  Linkedin, 
-  Sparkles, 
-  Terminal, 
-  Layers,
-  ChevronDown
+  ExternalLink,
+  Code2,
+  CheckCircle2
 } from 'lucide-react';
 import { candidateData } from '../../data/portfolioData';
 import { UnityInspectorHUD } from './UnityInspectorHUD';
-import { soundFx } from '../../utils/audio';
 
 export const Hero: React.FC = () => {
   return (
-    <section id="home" className="relative min-h-screen pt-28 pb-16 flex flex-col justify-center overflow-hidden">
-      {/* Background radial glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyber-primary/10 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-1/2 right-10 w-[400px] h-[400px] bg-cyber-secondary/15 rounded-full blur-[120px] pointer-events-none" />
+    <section id="home" className="relative pt-32 pb-20 md:pt-36 md:pb-24 overflow-hidden">
+      {/* Subtle background ambient gradient */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[500px] bg-laser-cyan/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Column: Headline & Value Proposition */}
+          
+          {/* Left Column: Candidate Info & Value Proposition */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            {/* Availability Badge */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-cyber-card/80 border border-cyber-primary/30 shadow-cyber-neon backdrop-blur-md">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyber-primary opacity-75" />
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyber-primary" />
+            
+            {/* Availability Status Badge */}
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-dark-card border border-dark-border shadow-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-laser-emerald opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-laser-emerald" />
               </span>
-              <span className="text-xs font-mono font-semibold text-cyber-primary tracking-wide">
+              <span className="text-xs font-mono font-medium text-slate-300">
                 {candidateData.badge}
               </span>
             </div>
 
             {/* Candidate Name & Title */}
             <div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-black tracking-tight text-white leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold tracking-tight text-white leading-tight">
                 {candidateData.name}
               </h1>
-              <div className="mt-3 flex items-center gap-3">
-                <span className="text-xl sm:text-2xl lg:text-3xl font-display font-bold bg-gradient-to-r from-cyber-primary via-cyber-neonBlue to-cyber-secondary bg-clip-text text-transparent">
+              <div className="mt-2">
+                <span className="text-lg sm:text-xl lg:text-2xl font-display font-semibold text-laser-cyan">
                   {candidateData.title}
                 </span>
               </div>
             </div>
 
-            {/* Resume Summary */}
-            <p className="text-base sm:text-lg text-cyber-textMuted leading-relaxed max-w-2xl font-sans">
-              Software Engineering graduate specializing in <span className="text-white font-medium">Unity 3D</span>, <span className="text-white font-medium">C# scripting</span>, and <span className="text-white font-medium">Cinemachine camera systems</span>. Bringing 5+ years of end-to-end operational execution to build responsive, player-first game mechanics.
+            {/* Summary Bio */}
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl font-sans">
+              Software Engineering graduate (B.Sc.) focused on <strong className="text-white font-semibold">Unity 2D/3D development</strong>, <strong className="text-white font-semibold">C# gameplay scripting</strong>, and responsive player mechanics. Combining computer science fundamentals with 5+ years of real-world operational problem-solving.
             </p>
 
-            {/* Action Buttons */}
-            <div className="flex flex-wrap gap-4 pt-2">
-              {/* Primary: View Projects */}
+            {/* Key Quick Tags */}
+            <div className="flex flex-wrap gap-2 pt-1 text-xs font-mono">
+              <span className="px-2.5 py-1 rounded bg-dark-panel border border-dark-border text-slate-300">
+                🎮 Unity 2022.3 LTS
+              </span>
+              <span className="px-2.5 py-1 rounded bg-dark-panel border border-dark-border text-slate-300">
+                💻 C# (.NET / OOP)
+              </span>
+              <span className="px-2.5 py-1 rounded bg-dark-panel border border-dark-border text-slate-300">
+                🎓 B.Sc. in Software Engineering
+              </span>
+              <span className="px-2.5 py-1 rounded bg-dark-panel border border-dark-border text-slate-300">
+                📍 Narayanganj / Remote
+              </span>
+            </div>
+
+            {/* Call to Actions */}
+            <div className="flex flex-wrap gap-3 pt-3">
+              {/* Primary: Play Pew Pew Orbit */}
+              {candidateData.itch && (
+                <a
+                  href="https://its-mash-here.itch.io/pewpeworbit-beta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-mono font-bold text-dark-bg bg-laser-cyan hover:bg-laser-cyanLight shadow-laser-glow transition-all"
+                >
+                  <Gamepad2 className="w-4 h-4" />
+                  <span>PLAY "PEW PEW ORBIT" BETA</span>
+                  <ExternalLink className="w-3.5 h-3.5 ml-1" />
+                </a>
+              )}
+
+              {/* Secondary: Explore Projects */}
               <a
                 href="#projects"
-                onClick={() => soundFx.playClick()}
-                onMouseEnter={() => soundFx.playHover()}
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-mono text-xs font-bold text-cyber-darker bg-gradient-to-r from-cyber-primary to-cyber-neonBlue hover:from-cyber-primaryHover hover:to-cyber-primary shadow-cyber-neon hover:scale-[1.02] active:scale-95 transition-all duration-200"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-mono font-semibold text-slate-200 bg-dark-card border border-dark-border hover:border-slate-500 hover:bg-dark-panel transition-all"
               >
-                <Gamepad2 className="w-4 h-4" />
-                <span>EXPLORE MY PROJECTS</span>
-                <ArrowRight className="w-4 h-4" />
+                <span>View Projects</span>
+                <ArrowRight className="w-3.5 h-3.5" />
               </a>
 
-              {/* Secondary: Download Resume */}
+              {/* Tertiary: Download Resume */}
               <a
                 href="./assets/resume/Md_Nurul_Mashraque_Maruf_Resume.pdf"
                 download="Md_Nurul_Mashraque_Maruf_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => soundFx.playClick()}
-                onMouseEnter={() => soundFx.playHover()}
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl font-mono text-xs font-bold text-cyber-textLight bg-cyber-card/80 border border-cyber-border hover:border-cyber-primary/50 hover:bg-cyber-panel transition-all duration-200"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-mono font-semibold text-slate-200 bg-dark-card border border-dark-border hover:border-slate-500 hover:bg-dark-panel transition-all"
               >
-                <Download className="w-4 h-4 text-cyber-primary" />
-                <span>DOWNLOAD RESUME</span>
+                <Download className="w-3.5 h-3.5 text-laser-cyan" />
+                <span>Resume (PDF)</span>
               </a>
+            </div>
 
-              {/* Tertiary: Contact Me */}
+            {/* Social Links */}
+            <div className="pt-3 flex items-center gap-4 text-xs font-mono text-slate-400">
               <a
-                href="#contact"
-                onClick={() => soundFx.playClick()}
-                onMouseEnter={() => soundFx.playHover()}
-                className="inline-flex items-center gap-2 px-4 py-3.5 rounded-xl font-mono text-xs font-semibold text-cyber-textMuted hover:text-white transition-colors"
+                href={candidateData.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 hover:text-white transition-colors"
+              >
+                <Github className="w-4 h-4" />
+                <span>GitHub</span>
+              </a>
+              <span className="text-slate-600">•</span>
+              <a
+                href="mailto:nurul.mashraque@gmail.com"
+                className="flex items-center gap-1.5 hover:text-white transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                <span>LET'S CONNECT</span>
+                <span>nurul.mashraque@gmail.com</span>
               </a>
             </div>
 
-            {/* Social Links & Quick Specs */}
-            <div className="pt-4 border-t border-cyber-border/60 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-cyber-textMuted">
-              <div className="flex items-center gap-3">
-                <a
-                  href={candidateData.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => soundFx.playClick()}
-                  className="p-2 rounded-lg bg-cyber-card border border-cyber-border hover:border-cyber-primary hover:text-cyber-primary transition-all"
-                  title="GitHub Profile"
-                >
-                  <Github className="w-4 h-4" />
-                </a>
-                <a
-                  href={candidateData.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => soundFx.playClick()}
-                  className="p-2 rounded-lg bg-cyber-card border border-cyber-border hover:border-cyber-primary hover:text-cyber-primary transition-all"
-                  title="LinkedIn Profile"
-                >
-                  <Linkedin className="w-4 h-4" />
-                </a>
-                <a
-                  href={`mailto:${candidateData.email}`}
-                  onClick={() => soundFx.playClick()}
-                  className="p-2 rounded-lg bg-cyber-card border border-cyber-border hover:border-cyber-primary hover:text-cyber-primary transition-all"
-                  title="Direct Email"
-                >
-                  <Mail className="w-4 h-4" />
-                </a>
-              </div>
-
-              <div className="flex items-center gap-4 text-[11px]">
-                <span className="flex items-center gap-1.5 text-cyber-primary">
-                  <Terminal className="w-3.5 h-3.5" /> Unity 3D / C#
-                </span>
-                <span className="text-cyber-border">|</span>
-                <span className="text-cyber-textLight">B.Sc. Software Engineering</span>
-              </div>
-            </div>
           </div>
 
-          {/* Right Column: Unity Inspector HUD Visualizer */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative z-10 transition-transform duration-300 hover:scale-[1.01]">
-              <UnityInspectorHUD />
-            </div>
-            {/* Glow backdrop behind HUD */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-cyber-primary/20 via-cyber-secondary/20 to-cyber-accent/20 rounded-2xl blur-xl opacity-50 -z-10" />
+          {/* Right Column: Interactive Unity Inspector Visualizer */}
+          <div className="lg:col-span-5">
+            <UnityInspectorHUD />
           </div>
+
         </div>
-      </div>
-
-      {/* Bottom Scroll Cue */}
-      <div className="mt-12 flex justify-center">
-        <a
-          href="#about"
-          onClick={() => soundFx.playClick()}
-          className="group flex flex-col items-center gap-1 text-[11px] font-mono text-cyber-textMuted hover:text-cyber-primary transition-colors"
-        >
-          <span>SCROLL_TO_EXPLORE</span>
-          <ChevronDown className="w-4 h-4 animate-bounce text-cyber-primary" />
-        </a>
       </div>
     </section>
   );

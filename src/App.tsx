@@ -1,25 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { LoadingScreen } from './components/layout/LoadingScreen';
 import { Navbar } from './components/layout/Navbar';
 import { Hero } from './components/hero/Hero';
-import { ParticleCanvas } from './components/hero/ParticleCanvas';
-import { AboutMe } from './components/about/AboutMe';
-import { SkillsMatrix } from './components/skills/SkillsMatrix';
 import { ProjectsSection } from './components/projects/ProjectsSection';
-import { DevProcessTimeline } from './components/pipeline/DevProcessTimeline';
+import { SkillsMatrix } from './components/skills/SkillsMatrix';
+import { AboutMe } from './components/about/AboutMe';
 import { ExperienceSection } from './components/experience/ExperienceSection';
 import { EducationSection } from './components/education/EducationSection';
-import { StatsDashboard } from './components/stats/StatsDashboard';
 import { ContactSection } from './components/contact/ContactSection';
 import { Footer } from './components/layout/Footer';
 
 export const App: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'projects', 'process', 'experience', 'education', 'contact'];
+      const sections = ['home', 'projects', 'skills', 'about', 'experience', 'education', 'contact'];
       const scrollPosition = window.scrollY + 200;
 
       for (const sectionId of sections) {
@@ -40,24 +35,16 @@ export const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-cyber-darker text-cyber-textLight font-sans selection:bg-cyber-primary selection:text-cyber-darker">
-      {/* Loading Sequence */}
-      {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
-
-      {/* Persistent Ambient Background Particle Canvas */}
-      <ParticleCanvas />
-
+    <div className="min-h-screen bg-dark-bg text-slate-100 font-sans selection:bg-laser-cyan selection:text-dark-bg">
       {/* Navigation */}
       <Navbar activeSection={activeSection} />
 
       {/* Main Content Sections */}
       <main className="relative z-10">
         <Hero />
-        <StatsDashboard />
-        <AboutMe />
-        <SkillsMatrix />
         <ProjectsSection />
-        <DevProcessTimeline />
+        <SkillsMatrix />
+        <AboutMe />
         <ExperienceSection />
         <EducationSection />
         <ContactSection />

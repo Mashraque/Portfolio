@@ -1,27 +1,28 @@
-import { CandidateInfo, SkillCategory, ExperienceItem, EducationItem, PipelineStep, StatItem } from '../types';
+import { CandidateInfo, SkillCategory, ExperienceItem, EducationItem } from '../types';
 
 export const candidateData: CandidateInfo = {
   name: "Md. Nurul Mashraque Maruf",
-  title: "Junior Unity Game Developer",
-  badge: "READY FOR HIRE // UNITY & GAMEPLAY PROGRAMMING",
+  title: "Junior Unity Developer & Gameplay Programmer",
+  badge: "OPEN TO WORK • JUNIOR UNITY & GAMEPLAY ROLES",
   location: "Narayanganj, Bangladesh",
   phone: "+8801815680182",
   email: "nurul.mashraque@gmail.com",
   github: "https://github.com/Mashraque",
-  linkedin: "https://linkedin.com/in/mashraque", // [Placeholder: update with actual LinkedIn URL]
-  availability: "Open to Junior Unity Developer, Gameplay Programmer & Game Dev Roles",
-  summary: "Software Engineering graduate with hands-on Unity game development experience and five years of end-to-end business operations management. Adept at translating creative concepts and technical constraints into polished, playable interactive experiences with robust C# architecture.",
+  linkedin: "https://linkedin.com/in/mashraque",
+  itch: "https://its-mash-here.itch.io",
+  availability: "Available for Junior Unity Developer, Gameplay Programmer & Technical Junior Roles",
+  summary: "Software Engineering graduate with a focused passion for Unity 2D/3D development, responsive gameplay mechanics, and clean C# fundamentals. Combining computer science training with 5+ years of real-world business operations, problem-solving, and disciplined execution.",
   bioParagraphs: [
-    "I am a Software Engineering graduate with a dedicated passion for Unity game development and gameplay programming. My journey combines technical software engineering rigor with creative game mechanic prototyping, dynamic camera systems, and responsive game feel.",
-    "With a strong foundation in C#, object-oriented architecture, and 3D/2D gameplay systems, I have engineered full gameplay loops ranging from tower defense resource economies and enemy wave AI to narrative adventure quest systems driven by Cinemachine.",
-    "Additionally, bringing 5+ years of end-to-end business operations and remote technical documentation experience, I offer proven cross-functional communication, rapid problem-solving, and disciplined execution—ready to deliver immediate impact on an agile game development team."
+    "I am a Software Engineering graduate actively developing my career in Unity game development and gameplay programming. I focus on creating responsive player mechanics, tight physics controllers, and clean component interactions in C#.",
+    "Through hands-on projects, I have built and published playable games like 'Pew Pew Orbit' on Itch.io—integrating orbital math, weapon heat systems, dynamic hazard spawners, and WebGL optimization—as well as 2D platformer mechanics with custom physics and parallax depth.",
+    "Bringing 5+ years of operational leadership, clear communication, and high-precision technical documentation experience, I am grounded, eager to learn under senior mentorship, and ready to deliver reliable contributions to an agile game development team."
   ],
   quickStats: {
     currentRole: "Junior Unity Developer",
     primaryEngine: "Unity 3D / 2D (C#)",
     mainLanguage: "C# (.NET / OOP)",
-    preferredPlatform: "PC & Mobile (Android/iOS)",
-    location: "Narayanganj, Bangladesh",
+    preferredPlatform: "PC & WebGL / Mobile",
+    location: "Narayanganj, Bangladesh (Open to Remote)",
     availability: "Immediate / Full-time / Remote"
   },
   languages: [
@@ -30,93 +31,93 @@ export const candidateData: CandidateInfo = {
   ],
   personalDetails: {
     dob: "October 20, 1993",
-    bloodGroup: "O (+ve)"
+    bloodGroup: "O (+ve) Regular Donor"
   }
 };
 
 export const skillsCategories: SkillCategory[] = [
   {
-    id: "game-dev",
-    categoryName: "Unity & Gameplay Development",
-    subtitle: "Core engine capabilities, physics, AI pathfinding, and interactive systems",
+    id: "gameplay-engine",
+    categoryName: "Unity Engine & Gameplay Systems",
+    subtitle: "Core engine workflows, 2D/3D physics, cameras, and player feedback",
     skills: [
-      { name: "Unity 3D & 2D Engine", level: "Core Skill", description: "Scene management, prefab workflows, lifecycle scripts, asset pipelines", highlight: true },
-      { name: "Cinemachine & Cameras", level: "Core Skill", description: "Dynamic virtual cameras, blend lists, target tracking, cutscene transitions", highlight: true },
-      { name: "AI & Pathfinding", level: "Core Skill", description: "NavMesh agents, state machines, enemy wave spawning, targeting logic", highlight: true },
-      { name: "Combat & Gameplay Loops", level: "Core Skill", description: "Tower defense loops, health systems, damage calculation, cooldown timers", highlight: true },
-      { name: "2D/3D Physics & Raycasting", level: "Core Skill", description: "Rigidbodies, custom collision triggers, ground detection, gravity simulation" },
-      { name: "Quest & Puzzle Logic", level: "Core Skill", description: "Objective tracking, clue triggers, inventory interactions, sequential state" },
-      { name: "Unity UI (uGUI)", level: "Working Knowledge", description: "Responsive HUDs, health bars, inventory panels, modal dialogues" },
-      { name: "Mobile Game Optimization", level: "Working Knowledge", description: "Draw call reduction, texture compression, frame-rate profiling" }
+      { name: "Unity 2D & 3D Engine", level: "Core Skill", description: "Scene hierarchy, prefab workflows, component lifecycle, asset pipelines", highlight: true },
+      { name: "2D Character Controllers", level: "Core Skill", description: "Rigidbody2D physics, grounded velocity calculations, responsive jump arcs", highlight: true },
+      { name: "Collision & Triggers", level: "Core Skill", description: "OnTriggerEnter2D/3D, layer masks, collectible pickups, interaction zones", highlight: true },
+      { name: "Unity UI (uGUI & TextMeshPro)", level: "Core Skill", description: "Score counters, health/heat gauges, pause menus, responsive HUD canvas" },
+      { name: "Cinemachine & Camera Systems", level: "Working Knowledge", description: "Target follow damping, deadzones, virtual camera transitions" },
+      { name: "Audio & Particle VFX", level: "Working Knowledge", description: "Audio clip playback, volume triggers, particle effect instantiation" },
+      { name: "WebGL Build & Deployment", level: "Core Skill", description: "Optimization, canvas scaling, Itch.io deployment pipeline", highlight: true }
     ]
   },
   {
     id: "programming",
-    categoryName: "Programming & Software Engineering",
-    subtitle: "Object-oriented design, clean code practices, and game architecture",
+    categoryName: "C# Scripting & Software Foundations",
+    subtitle: "Object-oriented programming, clean code structure, and game logic",
     skills: [
-      { name: "C# Scripting", level: "Core Skill", description: "Interfaces, delegates, events, generics, LINQ, and clean OOP architecture", highlight: true },
-      { name: "Object-Oriented Design (OOP)", level: "Core Skill", description: "Polymorphism, inheritance, encapsulation, modular script decoupling", highlight: true },
-      { name: "Game Architecture & Patterns", level: "Core Skill", description: "Singleton managers, Observer pattern, State machines, Component-based design", highlight: true },
-      { name: "Data Structures & Algorithms", level: "Working Knowledge", description: "Queues, lists, dictionaries, spatial sorting, pathfinding heuristics" },
-      { name: "Debugging & Profiling", level: "Core Skill", description: "Unity Profiler, Visual Studio debugger, console logs, breakpoint tracing" },
-      { name: "Version Control (Git/GitHub)", level: "Core Skill", description: "Branching strategies, conflict resolution, commit hygiene, repo management" }
+      { name: "C# (.NET / Unity Scripting)", level: "Core Skill", description: "Variables, methods, conditionals, loops, coroutines, clean syntax", highlight: true },
+      { name: "Object-Oriented Programming (OOP)", level: "Core Skill", description: "Classes, encapsulation, inheritance, modular component architecture", highlight: true },
+      { name: "Component Communication", level: "Core Skill", description: "GetComponent, UnityEvents, C# delegates, decoupling UI from game logic", highlight: true },
+      { name: "Game Loop & State Logic", level: "Core Skill", description: "GameManager state flow, score tracking, win/lose conditions, restart cycles" },
+      { name: "Object Pooling Pattern", level: "Working Knowledge", description: "Recycling projectile and hazard GameObjects to reduce GC allocations" },
+      { name: "Debugging & Console Tracing", level: "Core Skill", description: "Debug.Log, breakpoint tracing in Visual Studio, inspector validation" }
     ]
   },
   {
-    id: "tools-operations",
-    categoryName: "Tools & Professional Strengths",
-    subtitle: "Development environments, workflows, and cross-functional operations",
+    id: "tools-workflow",
+    categoryName: "Tools, Workflow & Professional Strengths",
+    subtitle: "Development environments, version control, and professional maturity",
     skills: [
-      { name: "Visual Studio / VS Code", level: "Core Skill", description: "C# IDE setup, IntelliSense, solution debugging, Unity integration" },
-      { name: "Git & GitHub", level: "Core Skill", description: "Collaborative workflows, PRs, versioning, release tracking" },
-      { name: "Technical Documentation", level: "Core Skill", description: "Game design documents (GDD), API notes, HIPAA-grade clinical protocols", highlight: true },
-      { name: "Cross-Functional Operations", level: "Core Skill", description: "5+ years managing global vendor negotiations, logistics, and multi-team goals" },
-      { name: "Blender & 3D Assets", level: "Working Knowledge", description: "Asset importing, material setup, collision mesh configuration" },
-      { name: "Figma & UI Prototyping", level: "Working Knowledge", description: "HUD wireframing, layout styling, UX flow design" }
+      { name: "Git & GitHub", level: "Core Skill", description: "Version control, commit history, repository organization, branch workflows", highlight: true },
+      { name: "Visual Studio / VS Code", level: "Core Skill", description: "C# IDE configuration, solution debugging, Unity IntelliSense integration" },
+      { name: "Itch.io Release Pipeline", level: "Core Skill", description: "WebGL package testing, compression settings, game page setup" },
+      { name: "Operational Discipline & Leadership", level: "Core Skill", description: "5+ years managing business operations, logistics, and accountability", highlight: true },
+      { name: "High-Precision Documentation", level: "Core Skill", description: "Clear technical logs, real-time documentation (AugmedixBD 100% rating)" },
+      { name: "Coachability & Rapid Learning", level: "Core Skill", description: "Active learner, receptive to senior code review and design feedback" }
     ]
   }
 ];
 
 export const experienceData: ExperienceItem[] = [
   {
-    id: "maruf-enterprise",
-    company: "Maruf Enterprise",
-    role: "Co-Proprietor & Operations Manager",
-    period: "12/2020 – Present",
+    id: "family-business",
+    company: "Family-Owned Textile Dyes & Chemicals Business",
+    role: "Business Operations Manager",
+    period: "11/2020 – Present",
     location: "Narayanganj, Bangladesh",
-    type: "Business Operations & Technical Management",
-    badge: "5+ YEARS LEADERSHIP",
+    type: "Business Operations & Management",
+    badge: "OPERATIONAL LEADERSHIP",
     responsibilities: [
-      "Directed end-to-end import logistics and distribution for the region's premier supplier of Optical Brightening Agents (OBA) and textile specialty chemicals.",
-      "Managed global supply chain workflows including international vendor negotiations, bulk procurement contracts, and multi-agency customs documentation.",
-      "Oversaw B2B client acquisition, account retention, inventory turnover forecasting, and debt recovery (dunning) systems across major regional industrial hubs.",
-      "Coordinated high-capacity warehouse operations to ensure flawless, uninterrupted material pipelines for large-scale manufacturing clients."
+      "Directed end-to-end supply chain logistics, procurement, and commercial distribution across regional industrial manufacturing hubs.",
+      "Developed and executed operational frameworks that increased client retention by 15% and reduced supply chain costs by 10%.",
+      "Introduced computerized inventory control and tracking workflows, reducing stock discrepancies by 25%.",
+      "Negotiated high-value supplier agreements and managed vendor relationships with consistency and financial rigor."
     ],
     achievements: [
-      "Maintained zero supply disruption across multi-year volatile global shipping cycles.",
-      "Streamlined inventory tracking workflows, boosting operational turnover efficiency and cash-flow predictability."
+      "15% increase in client retention through disciplined service delivery and proactive communication.",
+      "Maintained zero supply disruption across multi-year global logistics fluctuations."
     ],
-    technologies: ["Supply Chain Architecture", "Process Optimization", "Vendor Negotiations", "Cross-Functional Leadership", "Technical Documentation"]
+    technologies: ["Process Optimization", "Inventory Control", "Strategic Planning", "Financial Management", "Client Relations"]
   },
   {
     id: "augmedix-bd",
     company: "AugmedixBD",
     role: "Remote Documentation Specialist",
     period: "01/2019 – 11/2020",
-    location: "Dhaka, Bangladesh (Remote USA Support)",
-    type: "Real-time Medical Informatics & High-Accuracy Documentation",
-    badge: "100% SATISFACTION RATING",
+    location: "Dhaka, Bangladesh (US Healthcare Support)",
+    type: "Real-time Technical & Clinical Documentation",
+    badge: "EMPLOYEE OF THE MONTH",
     responsibilities: [
-      "Delivered high-precision, real-time clinical documentation for healthcare providers in California, USA via live Google Glass audio/video streams.",
-      "Maintained a continuous 100% client satisfaction rating while managing complex, high-velocity data entry with 70+ WPM typing speed.",
-      "Ensured rigorous compliance with United States HIPAA regulatory standards, clinical terminology, and secure patient data confidentiality protocols."
+      "Provided high-precision, real-time documentation for California-based physicians via live Google Glass audio/video streams.",
+      "Consistently maintained a 100% client satisfaction rating through extreme accuracy, speed, and strict regulatory compliance.",
+      "Trained and mentored 5 new documentation specialists, improving overall cohort productivity by 18%.",
+      "Maintained high-speed typing (80 WPM, 95%+ accuracy) and attention to detail under fast-paced live streaming conditions."
     ],
     achievements: [
-      "Recognized for zero-error clinical transcription under high-pressure real-time streaming environments.",
-      "Demonstrated extreme attention to detail and reliable remote asynchronous collaboration with US-based medical teams."
+      "Awarded Employee of the Month for flawless quality scores and client satisfaction.",
+      "Mentored and onboarded 5 new team members to full production readiness."
     ],
-    technologies: ["Google Glass Stream Interface", "Electronic Health Records (EHR)", "HIPAA Compliance", "Real-Time Data Processing", "70+ WPM Speed"]
+    technologies: ["Real-time Data Processing", "Technical Documentation", "Google Glass Interface", "80 WPM Typing", "Remote Teamwork"]
   }
 ];
 
@@ -125,109 +126,32 @@ export const educationData: EducationItem[] = [
     id: "daffodil-se",
     degree: "B.Sc. in Software Engineering",
     institution: "Daffodil International University",
-    period: "Graduated 2017",
+    period: "2017",
     cgpa: "3.03 / 4.00",
     location: "Dhaka, Bangladesh",
     highlights: [
-      "Comprehensive curriculum spanning Object-Oriented Programming (OOP), Software Architecture, Algorithms, Database Systems, and System Analysis.",
-      "Final coursework & practical lab projects focused on interactive software systems and clean application engineering."
+      "Rigorous core curriculum in Object-Oriented Programming (OOP), Data Structures & Algorithms, Software Architecture, and Database Systems.",
+      "Strong foundational training in modular software engineering, version control, and computer science problem-solving."
     ],
     coursework: [
-      "Object-Oriented Programming (C#/Java)",
+      "Object-Oriented Programming (C# / Java / C)",
       "Data Structures & Algorithms",
       "Software Design Patterns & Architecture",
       "Database Management Systems",
-      "Computer Graphics & Interactive Systems",
-      "Human-Computer Interaction (HCI)"
+      "Human-Computer Interaction (HCI)",
+      "Operating Systems & Linux"
     ]
-  }
-];
-
-export const developmentPipeline: PipelineStep[] = [
-  {
-    stepNumber: 1,
-    title: "Concept & GDD Planning",
-    codeName: "PHASE_01 // BLUEPRINT",
-    description: "Defining core gameplay loop, target player fantasy, mechanics scope, art direction, and technical architecture before writing the first line of code.",
-    deliverables: ["Game Design Document", "Core Loop Wireframe", "Architecture Blueprint"],
-    icon: "FileCode"
   },
   {
-    stepNumber: 2,
-    title: "Rapid Greybox Prototyping",
-    codeName: "PHASE_02 // MECHANICS",
-    description: "Building responsive player movement, physics interactions, and core mechanics using primitive 3D/2D shapes to validate 'Game Feel' and instant fun factor.",
-    deliverables: ["Playable Prototype", "Controller Script", "Physics Feedback"],
-    icon: "Gamepad2"
-  },
-  {
-    stepNumber: 3,
-    title: "System Architecture & AI",
-    codeName: "PHASE_03 // SYSTEMS",
-    description: "Designing modular, decoupled C# systems using Observer and State Machine patterns: wave spawning, enemy NavMesh AI, inventory, and health tracking.",
-    deliverables: ["Enemy State Machines", "Spawn System", "Manager Singletons"],
-    icon: "Cpu"
-  },
-  {
-    stepNumber: 4,
-    title: "Cinematics, UI & Game Feel",
-    codeName: "PHASE_04 // POLISH",
-    description: "Integrating Cinemachine dynamic camera blends, screen shake, audio triggers, particle VFX, and responsive uGUI HUD interfaces.",
-    deliverables: ["Cinemachine Virtual Cams", "HUD Feedback", "VFX & Audio Mix"],
-    icon: "Sparkles"
-  },
-  {
-    stepNumber: 5,
-    title: "Testing, Profiling & Debugging",
-    codeName: "PHASE_05 // QA_AUDIT",
-    description: "Identifying bottlenecks using the Unity Profiler, debugging edge cases, stress-testing enemy wave counts, and tuning difficulty balance.",
-    deliverables: ["Profiler Logs", "Bug Fixes", "Gameplay Balancing"],
-    icon: "ShieldAlert"
-  },
-  {
-    stepNumber: 6,
-    title: "Optimization & Build Release",
-    codeName: "PHASE_06 // DEPLOY",
-    description: "Optimizing draw calls, texture atlases, memory allocations, and creating standalone PC Windows & WebGL builds for playtesters and recruiters.",
-    deliverables: ["Standalone Build (.exe)", "WebGL Playable Demo", "GitHub Repository"],
-    icon: "Rocket"
-  }
-];
-
-export const statisticsData: StatItem[] = [
-  {
-    id: "prototypes",
-    label: "Unity Prototypes & Games",
-    value: "6+",
-    sublabel: "3D Tower Defense, Narrative & Arcade",
-    icon: "Gamepad2"
-  },
-  {
-    id: "systems",
-    label: "Core Gameplay Systems",
-    value: "18+",
-    sublabel: "AI, Spawners, Cameras, Inventory",
-    icon: "Cpu"
-  },
-  {
-    id: "csharp-code",
-    label: "C# Architecture Modules",
-    value: "45+",
-    sublabel: "Modular decoupled scripts",
-    icon: "Code2"
-  },
-  {
-    id: "operations",
-    label: "Professional Operations Exp",
-    value: "5+ Yrs",
-    sublabel: "End-to-end execution & rigor",
-    icon: "Briefcase"
-  },
-  {
-    id: "learning-streak",
-    label: "Daily Dev & Learning Streak",
-    value: "Active",
-    sublabel: "Unity 6, Cinemachine, Shaders",
-    icon: "Flame"
+    id: "tolaram-hsc",
+    degree: "Higher Secondary Certificate (H.S.C.) — Science",
+    institution: "Govt. Tolaram College",
+    period: "2013",
+    cgpa: "GPA 3.80 / 5.00",
+    location: "Dhaka, Bangladesh",
+    highlights: [
+      "Focus on Mathematics, Physics, Chemistry, and Information Technology."
+    ],
+    coursework: ["Physics", "Mathematics", "Chemistry", "ICT"]
   }
 ];

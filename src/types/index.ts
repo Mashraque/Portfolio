@@ -7,6 +7,7 @@ export interface CandidateInfo {
   email: string;
   github: string;
   linkedin: string;
+  itch?: string;
   availability: string;
   summary: string;
   bioParagraphs: string[];
@@ -51,7 +52,7 @@ export interface Project {
   id: string;
   title: string;
   tagline: string;
-  category: '3D Game' | '2D Game' | 'Prototype' | 'Multiplayer';
+  category: '3D Game' | '2D Game' | 'Prototype';
   type: string;
   platform: string;
   unityVersion: string;
@@ -99,22 +100,4 @@ export interface EducationItem {
   location?: string;
   highlights: string[];
   coursework: string[];
-}
-
-export interface PipelineStep {
-  stepNumber: number;
-  title: string;
-  codeName: string;
-  description: string;
-  deliverables: string[];
-  icon: string;
-}
-
-export interface StatItem {
-  id: string;
-  label: string;
-  value: string | number;
-  sublabel: string;
-  icon: string;
-  isPlaceholder?: boolean;
 }

@@ -3,13 +3,11 @@ import {
   Gamepad2, 
   ArrowUpRight, 
   Github, 
-  Sparkles, 
-  Cpu, 
   ExternalLink,
-  Layers
+  Code2,
+  CheckCircle2
 } from 'lucide-react';
 import { Project } from '../../types';
-import { soundFx } from '../../utils/audio';
 
 interface ProjectCardProps {
   project: Project;
@@ -18,55 +16,44 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) => {
   return (
-    <div className="hud-panel rounded-2xl border border-cyber-border hover:border-cyber-primary/60 transition-all duration-300 flex flex-col justify-between overflow-hidden group text-left relative bg-cyber-card/70 hover:shadow-2xl">
-      {/* Top Banner Image */}
-      <div className="relative aspect-[16/9] w-full overflow-hidden bg-cyber-darker">
+    <div className="laser-card rounded-xl overflow-hidden flex flex-col justify-between text-left group">
+      
+      {/* Thumbnail Header */}
+      <div className="relative aspect-[16/9] w-full overflow-hidden bg-dark-darker border-b border-dark-border">
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-cyber-card via-transparent to-transparent opacity-80" />
-
-        {/* Top Badges */}
+        
+        {/* Status Badge */}
         <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
-          <span className="text-[10px] font-mono font-bold px-2.5 py-1 rounded-full bg-cyber-darker/90 text-cyber-primary border border-cyber-primary/40 backdrop-blur-md">
+          <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-dark-darker/90 text-laser-cyan border border-laser-cyan/30 backdrop-blur-md">
             {project.category}
           </span>
 
-          {project.isPlaceholder ? (
-            <span className="text-[9px] font-mono px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 backdrop-blur-md">
-              CONCEPT // PLACEHOLDER
-            </span>
-          ) : (
-            <span className="text-[9px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 backdrop-blur-md">
-              RESUME VERIFIED
-            </span>
-          )}
-        </div>
-
-        {/* Platform Tag */}
-        <div className="absolute bottom-2 left-3 text-[10px] font-mono text-cyber-textMuted bg-cyber-darker/80 px-2 py-0.5 rounded border border-cyber-border/60">
-          {project.platform}
+          <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-dark-darker/90 text-slate-300 border border-dark-border backdrop-blur-md">
+            {project.developmentStatus}
+          </span>
         </div>
       </div>
 
-      {/* Card Content Body */}
+      {/* Card Body */}
       <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
         <div>
           {/* Title & Tagline */}
-          <h3 className="text-lg font-display font-bold text-white group-hover:text-cyber-primary transition-colors">
+          <h3 className="text-base font-display font-bold text-white group-hover:text-laser-cyan transition-colors">
             {project.title}
           </h3>
-          <p className="text-xs font-sans text-cyber-textMuted mt-1 line-clamp-2 leading-relaxed">
+          <p className="text-xs font-sans text-slate-400 mt-1 leading-relaxed">
             {project.tagline}
           </p>
 
-          {/* Key Features Quick List */}
-          <div className="mt-3 space-y-1.5 text-xs text-cyber-textLight">
+          {/* Key Features List */}
+          <div className="mt-3 space-y-1.5 text-xs text-slate-300">
             {project.mainFeatures.slice(0, 2).map((feat, idx) => (
               <div key={idx} className="flex items-start gap-1.5">
-                <span className="text-cyber-primary font-mono text-[11px]">›</span>
+                <span className="text-laser-cyan font-mono text-[11px]">›</span>
                 <span className="line-clamp-1">{feat}</span>
               </div>
             ))}
@@ -74,50 +61,63 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) =
         </div>
 
         <div>
-          {/* Tech Stack Chips */}
+          {/* Tech Tags */}
           <div className="flex flex-wrap gap-1.5 mb-4">
             {project.technologies.slice(0, 4).map((tech, idx) => (
               <span
                 key={idx}
-                className="text-[10px] font-mono px-2 py-0.5 rounded bg-cyber-panel border border-cyber-border text-cyber-textLight"
+                className="text-[10px] font-mono px-2 py-0.5 rounded bg-dark-panel border border-dark-border text-slate-300"
               >
                 {tech}
               </span>
             ))}
             {project.technologies.length > 4 && (
-              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-cyber-panel text-cyber-textMuted">
+              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-dark-panel text-slate-400">
                 +{project.technologies.length - 4}
               </span>
             )}
           </div>
 
-          {/* Card Action Buttons */}
-          <div className="pt-3 border-t border-cyber-border/60 flex items-center gap-2">
+          {/* Bottom Actions */}
+          <div className="pt-3 border-t border-dark-border flex items-center justify-between gap-2">
             <button
-              onClick={() => {
-                soundFx.playModalOpen();
-                onSelect(project);
-              }}
-              onMouseEnter={() => soundFx.playHover()}
-              className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl text-xs font-mono font-bold text-cyber-darker bg-cyber-primary hover:bg-cyber-primaryHover shadow-cyber-neon transition-all"
+              onClick={() => onSelect(project)}
+              className="px-3 py-1.5 rounded-lg text-xs font-mono font-medium text-slate-200 bg-dark-panel border border-dark-border hover:border-laser-cyan/50 hover:text-white transition-all flex items-center gap-1"
             >
-              <span>INSPECT SYSTEMS</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
+              <Code2 className="w-3.5 h-3.5 text-laser-cyan" />
+              <span>Details & Code</span>
             </button>
 
-            <a
-              href={project.githubUrl || "https://github.com/Mashraque/Portfolio"}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => soundFx.playClick()}
-              className="p-2.5 rounded-xl border border-cyber-border bg-cyber-panel text-cyber-textMuted hover:text-white hover:border-cyber-primary transition-colors"
-              title="GitHub Repository"
-            >
-              <Github className="w-4 h-4" />
-            </a>
+            <div className="flex items-center gap-2">
+              {project.demoUrl && project.demoUrl !== '#' && (
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-2.5 py-1.5 rounded-lg text-xs font-mono font-semibold text-dark-bg bg-laser-cyan hover:bg-laser-cyanLight transition-colors flex items-center gap-1"
+                >
+                  <span>Play</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              )}
+
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-dark-panel transition-colors"
+                  title="View GitHub"
+                >
+                  <Github className="w-4 h-4" />
+                </a>
+              )}
+            </div>
           </div>
         </div>
+
       </div>
+
     </div>
   );
 };
